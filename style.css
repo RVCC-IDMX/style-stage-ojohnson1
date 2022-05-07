@@ -1,10 +1,18 @@
+:root {
+  --mycolor: #333;
+  --backgroundcolor: #eee;
+}
+
 /*
 Below use @import to include one or more Google Fonts
 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap");
 
-/*
-Below use @import to include one CSS reset or normalize stylesheet of your choice
-*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Below use @import to include one CSS reset or normalize stylesheet of your choice */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css);
 
 /*
 Make the embedded svg small enough so it does not to overtake the page
@@ -17,6 +25,74 @@ svg {
 Add more CSS here to override the default styles
 as needed from the reset or normalize stylesheet
 
+
+
 Refer to README.md for more information
 
 */
+
+html {
+  background-color: var(--backgroundcolor);
+}
+.container {
+  margin-block: 3em 0;
+  width: 100%;
+  /* outline: 1px red solid; */
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  color: var(--mycolor);
+  padding-inline: 1rem;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  line-height: 1.1;
+}
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
