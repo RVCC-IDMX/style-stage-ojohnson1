@@ -1,0 +1,22 @@
+/*
+Below use @import to include one or more Google Fonts
+*/
+
+/*
+Below use @import to include one CSS reset or normalize stylesheet of your choice
+*/
+
+/*
+Make the embedded svg small enough so it does not to overtake the page
+*/
+svg {
+  width: 0.75em;
+}
+
+/*
+Add more CSS here to override the default styles
+as needed from the reset or normalize stylesheet
+
+Refer to README.md for more information
+
+*/
