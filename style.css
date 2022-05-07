@@ -8,7 +8,7 @@ Below use @import to include one or more Google Fonts
 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:ital,wght@1,500&display=swap");
 
 /* Below use @import to include one CSS reset or normalize stylesheet of your choice */
 
@@ -47,11 +47,12 @@ body {
   align-items: center;
   line-height: 1.5;
   font-family: "Nunito", sans-serif;
-  font-style: italic;
+
   color: var(--mycolor);
   padding-inline: 1rem;
-  max-width: 50rem;
+  /* max-width: 50rem; */
   margin-inline: auto;
+  font-size: clamp(1, 25rem, 5vw, 2rem);
 }
 
 nav ul {
@@ -71,9 +72,28 @@ nav a {
   font-size: 1.2rem;
 }
 
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--mycolor);
+
+  transform: scaleX(0.5);
+}
 p {
   font-size: 20px;
-  font-family: "Roboto";
+  font-family: "Nunito";
   font-style: normal;
 }
 
@@ -81,7 +101,16 @@ h1 {
   text-align: center;
   font-size: 6rem;
   line-height: 1.1;
+  font-family: "Montserrat";
+  font-style: normal;
 }
+
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 2rem;
+}
+
 .skip-link {
   position: absolute;
   left: -10000px;
@@ -95,4 +124,64 @@ h1 {
   position: static;
   width: auto;
   height: auto;
+}
+
+@media screen and (min-width: 40rem) {
+  body {
+    display: grid;
+    grid-template: auto 1fr auto / auto auto;
+  }
+
+  nav {
+    padding: 2rem;
+    grid-column: 1 / 4;
+  }
+
+  header {
+    grid-column: 1/4;
+    grid-row: 2/4;
+    margin-inline-end: auto;
+  }
+
+  h1 {
+    text-align: initial;
+    margin-block: 3rem;
+  }
+
+  h2 {
+    margin-inline-end: auto;
+    margin-block: 0;
+  }
+
+  section p {
+    margin-inline: 5rem auto;
+    grid-column-end: span 2;
+  }
+  .container {
+  }
+
+  aside {
+    grid-column: 3 / 4;
+  }
+
+  .page-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  /* .link-github {
+    color: #fff;
+    box-shadow: lightgray;
+    width: 400px;
+    height: 400px;
+    background-color: #2b2f47;
+
+    font-size: 20px;
+  } */
+
+  .page-footer {
+    grid-column: span 3;
+  }
 }
