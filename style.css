@@ -1,6 +1,7 @@
 :root {
   --mycolor: #333;
   --backgroundcolor: #eee;
+  --highlightcolor: #b2d3c2;
 }
 
 /*
@@ -73,6 +74,25 @@ nav a {
   text-decoration: none;
   color: inherit;
   font-size: 1.2rem;
+  position: relative;
+  font-weight: bold;
+}
+
+nav a::before {
+  content: "";
+  background-color: var(--highlightcolor);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
 }
 
 p {
@@ -103,6 +123,18 @@ h1 {
   /* max-width: 50rem; */
 }
 
+a {
+  box-shadow: inset 0 0 0 0 var(--highlightcolor);
+  color: var(--mycolor);
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: var(--highlightcolor) 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+a:hover {
+  box-shadow: inset 200px 0 0 0 var(--highlightcolor);
+  color: #333;
+}
 /* :is(#main, .container, p, section, article, aside, footer) a {
   position: relative;
   text-decoration: none;
