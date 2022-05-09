@@ -1,0 +1,43 @@
+@media screen and (min-width: 60rem) {
+  body {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  main {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    grid-column: 2/3;
+  }
+
+  nav {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+
+  header {
+    grid-column: 1/4;
+    grid-row: 2;
+  }
+
+  .profile {
+    grid-column: 1 / 2;
+  }
+
+  .styles {
+    grid-column: 3 / 4;
+  }
+  h1 {
+    text-align: initial;
+  }
+
+  /* 
+  footer {
+    grid-column: 1 / 4;
+  }
+
+  
+}
+
+#main {
+  grid-column: 2 / 3;
+} */
+}
