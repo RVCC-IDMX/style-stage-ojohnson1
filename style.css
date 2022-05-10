@@ -31,7 +31,7 @@ html {
 
 .container {
   margin-block: 3em 0;
-  width: min(92%, 60rem);
+  width: min(85%, 60rem);
   /* outline: 1px red solid; */
   display: grid;
   justify-content: center;
@@ -67,7 +67,7 @@ h2 {
   background-color: var(--highlightcolor);
   font-size: var(--fontsize-h2);
   color: white;
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 nav ul {
@@ -92,7 +92,7 @@ header {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 3em;
-  border-radius: 2em;
+  border-radius: 0.5em;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(10px);
@@ -151,6 +151,11 @@ h1 {
   line-height: 1.1;
 }
 
+:is(h3, h4) {
+  background-color: var(--backgroundcolor);
+  text-align: center;
+}
+
 body {
   max-width: 100%;
 }
@@ -192,8 +197,12 @@ a:hover {
   font-weight: (--linkfontweight);
 }
 
-#main .link-github {
+header .link-github {
   font-size: var(--linkfontsize);
+}
+
+.page_footer .container a {
+  text-align: center;
 }
 
 /* :is(#main, .container, p, section, article, aside, footer) a {
