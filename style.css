@@ -201,10 +201,6 @@ header .link-github {
   font-size: var(--linkfontsize);
 }
 
-.page_footer .container a {
-  text-align: center;
-}
-
 /* :is(#main, .container, p, section, article, aside, footer) a {
   position: relative;
   text-decoration: none;
